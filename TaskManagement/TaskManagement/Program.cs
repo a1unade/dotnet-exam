@@ -17,12 +17,21 @@ builder.Services
     .AddFiltering()
     .AddSorting();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        b => b.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
 var app = builder.Build();
 
 using var scoped = app.Services.CreateScope();
 var migrator = scoped.ServiceProvider.GetRequiredService<Migrator>();
 await migrator.MigrateAsync();
 
+app.UseCors("CorsPolicy");
 app.UseExceptionMiddleware();
 app.MapGraphQL();
 
