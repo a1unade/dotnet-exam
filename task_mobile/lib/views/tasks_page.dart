@@ -75,7 +75,7 @@ class TasksPage extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel'),
+            child: const Text('Отмена'),
           ),
           ElevatedButton(
             onPressed: () {
@@ -90,7 +90,7 @@ class TasksPage extends StatelessWidget {
                 Navigator.of(context).pop();
               }
             },
-            child: const Text('Save'),
+            child: const Text('Сохранить'),
           ),
         ],
       ),
