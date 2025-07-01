@@ -351,20 +351,9 @@ mutation {
 
 ### Главный экран
 
-<style>
-.images {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-
-}
-</style>
-
 <div class="images">
-    <img style="width: 300px" src="./materials/1.png" />
-    <img style="width: 300px" src="./materials/2.png" />
+    <img style="width: 400px" src="./materials/1.png" />
+    <img style="width: 400px" src="./materials/2.png" />
 </div>
 
 ### Добавление задачи
@@ -372,9 +361,9 @@ mutation {
 Для добавления задачи необходимо нажать кнопку **"Добавить задачу"** в нижней части экрана, в открывшемся модальном окне указать название и описание(необязательно), затем нажать кнопку **""Создать**:
 
 <div class="images">
-    <img style="width: 200px" src="./materials/3.png" />
-    <img style="width: 200px" src="./materials/4.png" />
-    <img style="width: 200px" src="./materials/5.png" />
+    <img style="width: 300px" src="./materials/3.png" />
+    <img style="width: 300px" src="./materials/4.png" />
+    <img style="width: 300px" src="./materials/5.png" />
 </div>
 
 ### Редактирование задачи
@@ -382,8 +371,8 @@ mutation {
 Для редактирования задачи необходимо нажать на карточку задачи, в открывшемся модальном окне изменить необходимые параметры, затем нажать кнопку **""Сохранить**:
 
 <div class="images">
-    <img style="width: 300px" src="./materials/6.png" />
-    <img style="width: 300px" src="./materials/7.png" />
+    <img style="width: 400px" src="./materials/6.png" />
+    <img style="width: 400px" src="./materials/7.png" />
 </div>
 
 ### Удаление задачи
@@ -391,8 +380,8 @@ mutation {
 Для удаления задачи необходимо нажать на соответствующуюю кнопку у карточки задачи:
 
 <div class="images">
-    <img style="width: 300px" src="./materials/8.png" />
-    <img style="width: 300px" src="./materials/9.png" />
+    <img style="width: 400px" src="./materials/8.png" />
+    <img style="width: 400px" src="./materials/9.png" />
 </div>
 
 > При запуске в браузере все будет выглядеть примерно так же, как и на мобильном устройстве.
