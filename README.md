@@ -361,9 +361,9 @@ mutation {
 Для добавления задачи необходимо нажать кнопку **"Добавить задачу"** в нижней части экрана, в открывшемся модальном окне указать название и описание(необязательно), затем нажать кнопку **""Создать**:
 
 <div class="images">
-    <img style="width: 280px" src="./materials/3.png" />
-    <img style="width: 280px" src="./materials/4.png" />
-    <img style="width: 280px" src="./materials/5.png" />
+    <img style="width: 250px" src="./materials/3.png" />
+    <img style="width: 250px" src="./materials/4.png" />
+    <img style="width: 250px" src="./materials/5.png" />
 </div>
 
 ### Редактирование задачи
