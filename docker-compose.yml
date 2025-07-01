@@ -1,0 +1,36 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: task_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: TaskDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: taskapipasswd
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      retries: 5
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./TaskManagement
+      dockerfile: ./TaskManagement/Dockerfile
+    container_name: task_backend
+    depends_on:
+      postgres: 
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=TaskDb;Username=postgres;Password=taskapipasswd
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+volumes:
+  pgdata:
